@@ -1,176 +1,201 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Abishek Narayanamoorthi — SOC Analyst Portfolio</title>
-    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abishek Narayanamoorthi | SOC Analyst Portfolio</title>
+
+    <!-- STYLE -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- ICONS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- AOS Animations -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+    <!-- THREE JS for 3D background -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+    <!-- Typed JS -->
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 </head>
 
 <body>
-    <!-- NAVBAR -->
-    <header>
-        <nav>
-            <div class="logo">ABISHEK</div>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#certifications">Certifications</a></li>
-                <li><a href="#resume">Resume</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#achievements">Achievements</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <!-- HERO SECTION -->
-    <section id="home" class="hero">
-        <div class="content">
-            <h1>Hello, I'm <span class="blue">Abishek Narayanamoorthi</span></h1>
-            <h2><span id="typed-text"></span></h2>
-            <p>SOC Analyst • Threat Detection • Blue Team Operations</p>
-            <a href="#contact" class="btn">Hire Me</a>
+<!-- ===================== NAVBAR ===================== -->
+<header class="navbar">
+    <div class="logo">AN</div>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#certifications">Certifications</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="theme-toggle">
+        <i class="fa-solid fa-moon"></i>
+    </div>
+</header>
+
+
+<!-- ===================== HERO SECTION ===================== -->
+<section id="home" class="hero">
+    <canvas id="bgCanvas"></canvas>
+
+    <div class="hero-content" data-aos="fade-up">
+        <h3>Hello, I'm</h3>
+        <h1>Abishek Narayanamoorthi</h1>
+        <h2><span id="typed"></span></h2>
+
+        <p class="location">📍 Saint Louis, USA</p>
+
+        <div class="hero-buttons">
+            <a href="assets/resume.pdf" class="btn-primary" download>Download Resume</a>
+            <a href="#contact" class="btn-secondary">Contact Me</a>
         </div>
-        <div class="profile-img">
+    </div>
+
+    <div class="hero-image" data-aos="zoom-in">
+        <div class="photo-frame">
             <img src="assets/PROFILE.jpg" alt="Abishek">
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- ABOUT SECTION -->
-    <section id="about" class="section">
-        <h2>About Me</h2>
-        <p>
-            I am a cybersecurity graduate student at Saint Louis University (MS, Dec 2026) with expertise in SOC operations,
-            threat detection, and AI-driven automation. Hands-on experience with Blue Team tools, network defense, 
-            incident response, and SIEM platforms like Splunk and Wazuh.
-        </p>
-    </section>
 
-    <!-- SKILLS -->
-    <section id="skills" class="section">
-        <h2>Skills</h2>
-        <div class="skills-grid">
-            <div class="skill-card">Python</div>
-            <div class="skill-card">MySQL</div>
-            <div class="skill-card">Splunk</div>
-            <div class="skill-card">Wazuh</div>
-            <div class="skill-card">Nmap</div>
-            <div class="skill-card">Burp Suite</div>
-            <div class="skill-card">Wireshark</div>
-            <div class="skill-card">Docker</div>
-            <div class="skill-card">Linux</div>
+
+<!-- ===================== ABOUT ===================== -->
+<section id="about" class="section">
+    <h2 data-aos="fade-up">About Me</h2>
+    <p class="about-text" data-aos="fade-up">
+        I am a cybersecurity graduate student at Saint Louis University (MS, Dec 2026)
+        with expertise in SOC operations, threat detection, incident response,
+        and AI-driven automation. Hands-on experience with SIEM tools, packet analysis,
+        Blue Team operations, and real SOC-style investigations.
+    </p>
+</section>
+
+
+
+<!-- ===================== SKILLS ===================== -->
+<section id="skills" class="section">
+    <h2 data-aos="fade-up">Technical Skills</h2>
+
+    <div class="skills-grid">
+
+        <div class="skill-card" data-aos="zoom-in">Python</div>
+        <div class="skill-card" data-aos="zoom-in">MySQL</div>
+        <div class="skill-card" data-aos="zoom-in">Splunk</div>
+        <div class="skill-card" data-aos="zoom-in">Wazuh</div>
+        <div class="skill-card" data-aos="zoom-in">Wireshark</div>
+        <div class="skill-card" data-aos="zoom-in">Nmap</div>
+        <div class="skill-card" data-aos="zoom-in">Burp Suite</div>
+        <div class="skill-card" data-aos="zoom-in">Docker</div>
+        <div class="skill-card" data-aos="zoom-in">Linux</div>
+
+    </div>
+</section>
+
+
+
+<!-- ===================== PROJECTS ===================== -->
+<section id="projects" class="section">
+    <h2 data-aos="fade-up">Projects</h2>
+
+    <div class="project-grid">
+
+        <div class="project-card" data-aos="fade-up" data-tilt>
+            <h3>AI-Powered Security Triage</h3>
+            <p>
+                Automated Nmap & Nessus scanning, LLM-based vulnerability analysis,
+                real-time visualization, Docker deployment & FastAPI backend.
+            </p>
+            <a href="https://github.com/Abirock7/ai-triage" class="project-btn">
+                View Project <i class="fa-solid fa-arrow-right"></i>
+            </a>
         </div>
-    </section>
 
-   <!-- CERTIFICATIONS -->
-<section id="certifications" class="section">
-    <h2>Certifications</h2>
-
-    <div class="cert-grid">
-
-        <div class="cert-card">
-            <img src="assets/google_cybersecurity.png" alt="Google Cybersecurity Certificate">
-            <p>Google Cybersecurity Certificate</p>
-        </div>
-
-        <div class="cert-card">
-            <img src="assets/google_cybersecurity_badge.png" alt="Google Cybersecurity Badge">
-            <p>Google Cybersecurity Badge</p>
-        </div>
-
-        <div class="cert-card">
-            <img src="assets/google_data_analytics.png" alt="Google Data Analytics">
-            <p>Google Data Analytics Certificate</p>
-        </div>
-
-        <div class="cert-card">
-            <img src="assets/tryhackme_soc.png" alt="TryHackMe SOC Level 1">
-            <p>TryHackMe – SOC Level 1</p>
-        </div>
-
-        <div class="cert-card">
-            <img src="assets/tryhackme_101.png" alt="TryHackMe Cyber Security 101">
-            <p>TryHackMe – Cyber Security 101</p>
+        <div class="project-card" data-aos="fade-up" data-tilt>
+            <h3>Splunk SIEM Analysis</h3>
+            <p>
+                Built dashboards, alerts, SPL queries, forwarder ingestion,
+                threat detection rules, and end-to-end SOC monitoring.
+            </p>
         </div>
 
     </div>
 </section>
 
 
-    <!-- RESUME -->
-    <section id="resume" class="section">
-        <h2>Resume</h2>
-        <a href="assets/resume.pdf" class="btn" download>Download Resume</a>
-    </section>
 
-    <!-- EXPERIENCE -->
-    <section id="experience" class="section">
-        <h2>Experience</h2>
-        <ul>
-            <li><strong>Design Engineer – Craftsman Automation (2023–2024)</strong> — managed 50+ client projects, data optimization.</li>
-            <li><strong>Cybersecurity Intern – Verzeo</strong> (VAPT)</li>
-            <li><strong>Cybersecurity Intern – Shape AI</strong> (AWS security)</li>
-            <li><strong>Cybersecurity Intern – Supraja Technologies</strong> (IR & Recon)</li>
-        </ul>
-    </section>
+<!-- ===================== CERTIFICATIONS ===================== -->
+<section id="certifications" class="section">
+    <h2 data-aos="fade-up">Certifications</h2>
 
-    <!-- PROJECTS -->
-    <section id="projects" class="section">
-        <h2>Projects</h2>
-        <div class="project-card">
-            <h3>AI-Powered Security Triage Dashboard</h3>
-            <p>Automated Nmap/Nessus scanning, LLM analysis, and visualization using Docker + FastAPI.</p>
-            <a href="https://github.com/Abirock7/ai-triage">View Project →</a>
+    <div class="cert-grid">
+
+        <div class="cert-card" data-aos="flip-up">
+            <img src="assets/google_cybersecurity.png" alt="">
+            <p>Google Cybersecurity Certificate</p>
         </div>
 
-        <div class="project-card">
-            <h3>Splunk SIEM Dashboards</h3>
-            <p>Built custom SPL queries, alerts, dashboards, and forwarder-based ingestion for SOC analysis.</p>
+        <div class="cert-card" data-aos="flip-up">
+            <img src="assets/tryhackme_soc.png" alt="">
+            <p>TryHackMe SOC Level 1</p>
         </div>
-    </section>
 
-    <!-- ACHIEVEMENTS -->
-    <section id="achievements" class="section">
-        <h2>Achievements</h2>
-        <ul>
-            <li>Top 124/8573 – National Cyber League Fall 2025</li>
-            <li>Scholarship Recipient – Authenticate 2025 (FIDO Alliance)</li>
-            <li>Scholarship Attendee – Black Hat USA 2025</li>
-            <li>Top 2% on TryHackMe</li>
-        </ul>
-    </section>
+        <div class="cert-card" data-aos="flip-up">
+            <img src="assets/google_data_analytics.png" alt="">
+            <p>Google Data Analytics Certificate</p>
+        </div>
 
-    <!-- EDUCATION -->
-    <section id="education" class="section">
-        <h2>Education</h2>
-        <ul>
-            <li>MS Cybersecurity — Saint Louis University (2025–2026)</li>
-            <li>BE Mechanical Engineering — SREC (2019–2023)</li>
-        </ul>
-    </section>
+        <a href="certifications.html" class="btn-primary more-btn">View All</a>
 
-    <!-- CONTACT -->
-    <section id="contact" class="section">
-        <h2>Contact</h2>
-        <p>Email: abisheknarayanamoorthi0218@gmail.com</p>
-        <p>Phone: +1 314 267 1066</p>
+    </div>
+</section>
+
+
+
+<!-- ===================== CONTACT ===================== -->
+<section id="contact" class="section">
+    <h2 data-aos="fade-up">Contact Me</h2>
+
+    <p data-aos="fade-up">Feel free to reach out for collaborations or opportunities.</p>
+
+    <div class="contact-info" data-aos="zoom-in">
+        <p><i class="fa-solid fa-envelope"></i> abisheknarayanamoorthi0218@gmail.com</p>
+        <p><i class="fa-solid fa-phone"></i> +1 314 267 1066</p>
         <p>
-            <a href="http://www.linkedin.com/in/abishek-narayanamoorthi-baa59b1aa">LinkedIn</a> |
-            <a href="https://medium.com/@abishekmoorthi711">Medium</a> |
-            <a href="https://github.com/Abirock7">GitHub</a>
+            <a href="https://linkedin.com/in/abishek-narayanamoorthi-baa59b1aa">
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/Abirock7">
+                <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="https://medium.com/@abishekmoorthi711">
+                <i class="fa-brands fa-medium"></i>
+            </a>
         </p>
-    </section>
-<!-- Modal for Enlarged Images -->
-<div id="imgModal" class="modal">
-    <span class="close">&times;</span>
-    <img class="modal-content" id="modalImage">
-</div>
+    </div>
 
-    <script src="script.js"></script>
+</section>
+
+<footer>
+    © 2025 Abishek Narayanamoorthi — All Rights Reserved
+</footer>
+
+<!-- JS -->
+<script src="script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+
 </body>
 </html>
