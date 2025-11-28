@@ -7,87 +7,95 @@
 
   <link rel="stylesheet" href="assets/style.css" />
   <script src="https://unpkg.com/scrollreveal"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
 </head>
 
 <body>
 
+<!-- NAVIGATION -->
 <header>
   <nav>
     <div class="logo">AN</div>
     <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html#home">Home</a></li>
       <li><a href="index.html#about">About</a></li>
       <li><a href="index.html#skills">Skills</a></li>
       <li><a href="projects.html">Projects</a></li>
-      <li><a href="certifications.html" class="active">Certifications</a></li>
+      <li><a class="active" href="certifications.html">Certifications</a></li>
       <li><a href="achievements.html">Achievements</a></li>
       <li><a href="contacts.html">Contact</a></li>
     </ul>
   </nav>
 </header>
 
-<section class="section">
+<!-- CERTIFICATIONS SECTION -->
+<section class="section" style="padding-top:140px;">
   <h2 class="section-title">My Certifications</h2>
   <p class="section-subtitle">
-    These certifications demonstrate continuous learning, hands-on security expertise,
-    and commitment to Blue-Team excellence.
+    Recognitions and learning achievements across cybersecurity, analytics, and SOC operations.
   </p>
 
   <div class="cert-grid">
 
-    <!-- Certificate 1 -->
-    <div class="cert-card" onclick="openCertModal('google_cybersecurity.png')">
-      <img src="assets/google_cybersecurity.png" alt="Certificate" />
+    <!-- CERT 1 -->
+    <div class="cert-card" onclick="openCertModal('google_cybersecurity.png')" data-aos="fade-up">
+      <img src="assets/google_cybersecurity.png" alt="Google Cybersecurity Certificate" />
       <h3>Google Cybersecurity Certificate</h3>
-      <p>Validated skills in SIEM, network defense, detection engineering, and SOC operations.</p>
     </div>
 
-    <!-- Certificate 2 -->
-    <div class="cert-card" onclick="openCertModal('google_cybersecurity_badge.png')">
-      <img src="assets/google_cybersecurity_badge.png" alt="Badge" />
+    <!-- CERT 2 -->
+    <div class="cert-card" onclick="openCertModal('google_cybersecurity_badge.png')" data-aos="fade-up" data-aos-delay="100">
+      <img src="assets/google_cybersecurity_badge.png" alt="Google Badge" />
       <h3>Google Cybersecurity Badge</h3>
-      <p>Recognition for completing Google’s security curriculum.</p>
     </div>
 
-    <!-- Certificate 3 -->
-    <div class="cert-card" onclick="openCertModal('google_data_analytics.png')">
-      <img src="assets/google_data_analytics.png" alt="Certificate" />
+    <!-- CERT 3 -->
+    <div class="cert-card" onclick="openCertModal('google_data_analytics.png')" data-aos="fade-up" data-aos-delay="200">
+      <img src="assets/google_data_analytics.png" alt="Google Data Analytics" />
       <h3>Google Data Analytics Certificate</h3>
-      <p>SQL, dashboards, data automation — supporting threat analytics.</p>
     </div>
 
-    <!-- Certificate 4 -->
-    <div class="cert-card" onclick="openCertModal('tryhackme_soc.png')">
-      <img src="assets/tryhackme_soc.png" alt="SOC Level 1" />
-      <h3>TryHackMe – SOC Level 1</h3>
-      <p>Hands-on SOC operations, forensics, detection, Windows analysis.</p>
+    <!-- CERT 4 -->
+    <div class="cert-card" onclick="openCertModal('tryhackme_soc.png')" data-aos="fade-up" data-aos-delay="300">
+      <img src="assets/tryhackme_soc.png" alt="THM SOC Level 1" />
+      <h3>TryHackMe — SOC Level 1</h3>
     </div>
 
-    <!-- Certificate 5 -->
-    <div class="cert-card" onclick="openCertModal('tryhackme_101.png')">
-      <img src="assets/tryhackme_101.png" alt="THM Intro" />
-      <h3>TryHackMe – Intro to Cybersecurity</h3>
-      <p>Cybersecurity foundations, Linux, networking, and OWASP basics.</p>
+    <!-- CERT 5 -->
+    <div class="cert-card" onclick="openCertModal('tryhackme_101.png')" data-aos="fade-up" data-aos-delay="400">
+      <img src="assets/tryhackme_101.png" alt="THM Intro to Cybersecurity" />
+      <h3>TryHackMe — Intro to Cybersecurity</h3>
     </div>
 
   </div>
 </section>
 
-<!-- Modal -->
+<!-- MODAL -->
 <div id="certModal" class="cert-modal">
   <div class="cert-modal-content">
 
     <span class="close-modal" onclick="closeCertModal()">&times;</span>
 
-    <img id="modalCertImg" src="" alt="Certificate Preview" />
+    <img id="modalCertImg" src="" alt="Certificate Preview" class="modal-img">
 
     <a href="https://drive.google.com/drive/folders/1MCvQMTYwYPQBYMHiUjxCCvuZX5QWRHim?usp=sharing"
-       class="drive-btn"
-       target="_blank">
-       Open in Google Drive
+       class="drive-btn" target="_blank">
+      Open in Google Drive →
     </a>
+
   </div>
 </div>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2025 Abishek Narayanamoorthi • Cybersecurity Portfolio</p>
+</footer>
+
+<!-- AOS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+  AOS.init({ duration: 1200 });
+</script>
 
 <script src="assets/script.js"></script>
 </body>
