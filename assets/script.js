@@ -1,8 +1,13 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-    /* ----------------------------------------------------------
-       Smooth Scrolling
-    ----------------------------------------------------------- */
+    // REMOVE PRELOADER
+    const preloader = document.getElementById("preloader");
+    if (preloader) {
+        preloader.style.opacity = "0";
+        setTimeout(() => preloader.style.display = "none", 400);
+    }
+
+    /* Smooth scrolling */
     document.querySelectorAll("a[href^='#']").forEach(anchor => {
         anchor.addEventListener("click", function (e) {
             if (this.getAttribute("href") !== "#") {
@@ -14,9 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    /* ----------------------------------------------------------
-       Add active class on scroll
-    ----------------------------------------------------------- */
+    /* Active nav */
     window.addEventListener("scroll", () => {
         let scrollPos = window.scrollY + 120;
 
@@ -31,9 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    /* ----------------------------------------------------------
-       Navbar shadow
-    ----------------------------------------------------------- */
+    /* Navbar shadow */
     const header = document.querySelector("header");
     window.addEventListener("scroll", () => {
         if (window.scrollY > 50) {
@@ -43,9 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    /* ----------------------------------------------------------
-       DARK MODE
-    ----------------------------------------------------------- */
+    /* DARK MODE */
     const toggle = document.getElementById("darkToggle");
     if (toggle) {
         toggle.addEventListener("click", () => {
@@ -53,9 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    /* ----------------------------------------------------------
-       SCROLLREVEAL
-    ----------------------------------------------------------- */
+    /* SCROLLREVEAL */
     if (typeof ScrollReveal !== "undefined") {
         const sr = ScrollReveal({
             distance: "40px",
