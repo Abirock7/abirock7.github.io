@@ -121,82 +121,54 @@ nav {
 =========================================================== */
 .hero {
   padding-top: 160px;
-  padding-bottom: 80px;
-}
-
-.hero-container {
+  padding-bottom: 120px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 60px;
+  text-align: left; /* keep left alignment but still centered in layout */
 }
 
 .hero-content {
-  max-width: 55%;
+  max-width: 600px;
+}
+
+.hero h1, .hero h2, .hero p {
   text-align: left;
 }
 
-.hero-content h1 {
-  font-size: 44px;
-  font-weight: 700;
-  margin-bottom: 10px;
-}
-
-.hero-content h2 {
-  font-size: 24px;
-  color: #666;
-  margin-bottom: 15px;
-}
-
-.hero-content p {
-  font-size: 16px;
-  color: #555;
-  line-height: 1.6;
-  margin-bottom: 25px;
-}
-
-/* Buttons */
-.hero-buttons {
+.hero-photo {
   display: flex;
-  gap: 16px;
+  justify-content: center;
+  align-items: center;
 }
 
-.btn-primary {
-  background: #4a8af4;
-  color: #fff;
-  padding: 12px 26px;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: 0.3s;
-}
-
-.btn-primary:hover {
-  background: #3a76d8;
-}
-
-.btn-secondary {
-  background: transparent;
-  border: 2px solid #4a8af4;
-  color: #4a8af4;
-  padding: 12px 26px;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: 600;
-}
-
-.btn-secondary:hover {
-  background: #4a8af4;
-  color: #fff;
-}
-
-/* Profile image */
 .profile-circle {
   width: 280px;
+  height: 280px;
+  object-fit: cover;
   border-radius: 50%;
   border: 6px solid #4a8af4;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
 }
 
+/* MOBILE FIX */
+@media (max-width: 900px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-content h1, 
+  .hero-content h2, 
+  .hero-content p {
+    text-align: center !important;
+  }
+
+  .profile-circle {
+    margin-top: 30px;
+  }
+}
 /* ==========================================================
    SKILLS GRID
 =========================================================== */
