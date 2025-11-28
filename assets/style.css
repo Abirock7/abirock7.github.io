@@ -2,9 +2,9 @@
    GLOBAL CYBER BACKGROUND (Blue Nodes)
 ----------------------------------------------------------- */
 body {
-  background: url("https://i.imgur.com/8fKQn1G.jpeg") no-repeat center center fixed !important;
-  background-size: cover !important;
-  color: #fff !important;
+  background: url("https://i.imgur.com/8fKQn1G.jpeg") no-repeat center center fixed;
+  background-size: cover;
+  color: #fff;
   font-family: "Poppins", sans-serif;
   overflow-x: hidden;
 }
@@ -18,7 +18,7 @@ body {
   box-sizing: border-box;
 }
 
-/* Background particles */
+/* Background particles (optional) */
 #particles-js {
   position: fixed;
   width: 100%;
@@ -34,7 +34,7 @@ body {
 #preloader {
   position: fixed;
   inset: 0;
-  background: #fff;
+  background: #000;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -43,7 +43,7 @@ body {
 }
 
 .loader {
-  border: 6px solid #eaeaea;
+  border: 6px solid #333;
   border-top: 6px solid #4a8af4;
   width: 55px;
   height: 55px;
@@ -63,7 +63,9 @@ header {
   padding: 22px 60px;
   position: fixed;
   top: 0;
-  z-index: 50;
+  z-index: 100;
+  background: rgba(0,0,0,0.55);
+  backdrop-filter: blur(10px);
 }
 
 nav {
@@ -87,26 +89,12 @@ nav {
 .nav-links a {
   font-weight: 500;
   text-decoration: none;
+  color: #eaeaea;
   transition: 0.3s;
 }
 
 .nav-links a:hover,
 .nav-links a.active {
-  color: #4a8af4;
-}
-
-/* ==========================================================
-   SECTIONS
-=========================================================== */
-.section {
-  padding: 100px 13%;
-  text-align: center;
-}
-
-.section-title {
-  font-size: 32px;
-  font-weight: 700;
-  margin-bottom: 25px;
   color: #4a8af4;
 }
 
@@ -118,9 +106,9 @@ nav {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  text-align: center;
-  padding: 160px 20px 120px;
+  padding: 180px 20px 120px;
   min-height: 90vh;
+  text-align: center;
 }
 
 .hero-inner {
@@ -131,24 +119,22 @@ nav {
 }
 
 .hero h1 {
-  font-size: 42px;
+  font-size: 48px;
   font-weight: 700;
 }
 
 .hero h2 {
   font-size: 26px;
-  font-weight: 600;
-  opacity: 0.85;
+  opacity: 0.9;
 }
 
 .hero p {
   max-width: 900px;
-  line-height: 1.7;
   font-size: 18px;
+  line-height: 1.7;
   opacity: 0.9;
 }
 
-/* Photo centered */
 .profile-container {
   display: flex;
   justify-content: center;
@@ -159,10 +145,11 @@ nav {
   height: 260px;
   border-radius: 50%;
   border: 6px solid #4a8af4;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.35);
   object-fit: cover;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
 }
 
+/* Buttons */
 .hero-buttons {
   display: flex;
   justify-content: center;
@@ -170,8 +157,46 @@ nav {
   margin-top: 10px;
 }
 
+.btn-primary,
+.btn-secondary {
+  padding: 12px 26px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn-primary {
+  background: #4a8af4;
+  color: #fff;
+}
+
+.btn-secondary {
+  border: 2px solid #4a8af4;
+  color: #4a8af4;
+}
+
+.btn-secondary:hover {
+  background: #4a8af4;
+  color: #fff;
+}
+
 /* ==========================================================
-   SKILLS
+   SECTIONS
+=========================================================== */
+.section {
+  padding: 100px 12%;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 32px;
+  margin-bottom: 25px;
+  color: #4a8af4;
+}
+
+/* ==========================================================
+   SKILLS GRID
 =========================================================== */
 .skills-grid {
   margin-top: 35px;
@@ -181,8 +206,10 @@ nav {
 }
 
 .skill-card {
+  background: rgba(0,0,0,0.4);
   padding: 25px;
   border-radius: 12px;
+  backdrop-filter: blur(8px);
   transition: 0.3s;
 }
 
@@ -191,20 +218,23 @@ nav {
 }
 
 /* ==========================================================
-   PROJECTS (wide layout)
+   PROJECTS — WIDE LAYOUT WITH GALLERY
 =========================================================== */
 .project-wide {
-  background: rgba(0,0,0,0.4);
+  background: rgba(0,0,0,0.45);
   padding: 40px;
-  margin: 40px 0;
   border-radius: 14px;
   display: flex;
   justify-content: space-between;
   gap: 40px;
   backdrop-filter: blur(8px);
+  margin-bottom: 40px;
 }
 
-.project-text { width: 45%; }
+.project-text {
+  width: 45%;
+  text-align: left;
+}
 
 .gallery {
   width: 50%;
@@ -220,44 +250,49 @@ nav {
   transition: 0.3s;
 }
 
+.gallery-img:hover {
+  transform: scale(1.05);
+}
+
+/* Modal */
+.modal {
+  position: fixed;
+  inset: 0;
+  display: none;
+  background: rgba(0,0,0,0.85);
+  backdrop-filter: blur(6px);
+  justify-content: center;
+  align-items: center;
+  z-index: 99999;
+}
+
+.modal-content {
+  width: 80%;
+  border-radius: 10px;
+}
+
 /* ==========================================================
    CERTIFICATIONS
 =========================================================== */
 .cert-grid {
-  margin-top: 30px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 25px;
 }
 
-/* Modal */
-.cert-modal {
-  position: fixed;
-  inset: 0;
-  display: none;
-  justify-content: center;
-  align-items: center;
-  background: rgba(0,0,0,0.75);
-  z-index: 99999;
-}
-
-.cert-modal-content {
-  background: rgba(0,0,0,0.25);
-  padding: 25px;
-  border-radius: 16px;
-  text-align: center;
-  width: 70%;
-  backdrop-filter: blur(8px);
-}
-
-/* ==========================================================
-   ACHIEVEMENTS
-=========================================================== */
-.achievement-card {
-  padding: 25px;
+.cert-card {
+  background: rgba(255,255,255,0.08);
+  padding: 15px;
   border-radius: 12px;
-  margin-bottom: 25px;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s;
   backdrop-filter: blur(10px);
+}
+
+.cert-card img {
+  border-radius: 10px;
+  width: 100%;
 }
 
 /* ==========================================================
@@ -273,16 +308,27 @@ nav {
    FOOTER
 =========================================================== */
 footer {
-  margin-top: 40px;
   text-align: center;
   padding: 18px 0;
+  background: rgba(0,0,0,0.45);
+  margin-top: 40px;
 }
 
 /* ==========================================================
    RESPONSIVE
 =========================================================== */
 @media (max-width: 900px) {
-  .project-wide { flex-direction: column; }
-  .gallery { width: 100%; }
-  .contact-wrapper { flex-direction: column; }
+  .hero h1 { font-size: 36px; }
+
+  .project-wide {
+    flex-direction: column;
+  }
+  
+  .gallery {
+    width: 100%;
+  }
+
+  .contact-wrapper {
+    flex-direction: column;
+  }
 }
