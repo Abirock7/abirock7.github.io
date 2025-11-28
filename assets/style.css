@@ -1,50 +1,13 @@
 /* ----------------------------------------------------------
-   GLOBAL CYBER BACKGROUND (Matrix Style)
+   GLOBAL CYBER BACKGROUND (Blue Nodes)
 ----------------------------------------------------------- */
 body {
-  background: url("https://i.imgur.com/Vm4D9y5.png"), #020b16 !important;
+  background: url("https://i.imgur.com/8fKQn1G.jpeg") no-repeat center center fixed !important;
   background-size: cover !important;
-  background-attachment: fixed !important;
-  background-position: center !important;
-  color: #fff;
+  color: #fff !important;
   font-family: "Poppins", sans-serif;
   overflow-x: hidden;
 }
-
-.section, .project-card, .cert-card, footer, header {
-  background: transparent !important;
-  color: #fff !important;
-}
-
-nav a,
-.section-title,
-p,
-h1, h2, h3 {
-  color: #fff !important;
-}
-
-/* Futuristic card styling */
-.project-card, .cert-card, .achievement-card {
-  background: rgba(0,0,0,0.45) !important;
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255,255,255,0.08);
-}
-
-header {
-  background: rgba(0,0,0,0.6) !important;
-  backdrop-filter: blur(10px) !important;
-}
-
-.btn-primary {
-  background: #0098ff !important;
-  color: #fff !important;
-}
-
-.btn-secondary {
-  border-color: #0098ff !important;
-  color: #0098ff !important;
-}
-
 
 /* ==========================================================
    GLOBAL RESET
