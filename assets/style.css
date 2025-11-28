@@ -109,6 +109,42 @@ nav ul li a:hover {
     color: #00b7ff;
     text-decoration: none;
 }
+/* Certifications Section */
+.cert-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.cert-card {
+    background: #0d1326;
+    padding: 15px;
+    border-radius: 12px;
+    border: 1px solid #00b7ff;
+    box-shadow: 0 0 10px rgba(0,183,255,0.3);
+    transition: 0.3s ease;
+    text-align: center;
+}
+
+.cert-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 18px #00b7ff;
+}
+
+.cert-card img {
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid #00b7ff;
+    cursor: pointer;
+}
+
+.cert-card p {
+    margin-top: 12px;
+    font-weight: 500;
+    color: #9ecbff;
+}
+
 /* Image Modal */
 .modal {
     display: none;
