@@ -1,68 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abishek Narayanamoorthi | Cybersecurity Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Abishek Narayanamoorthi | Cybersecurity Portfolio</title>
 
-    <!-- FONTS -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="assets/style.css">
-
-    <!-- AOS Animation Library -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
-
-    <!-- ScrollReveal -->
-    <script src="https://unpkg.com/scrollreveal"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
 </head>
 
 <body>
+<canvas id="matrix-bg"></canvas>
 
-<!-- PRELOADER -->
-<div id="preloader">
-    <div class="loader"></div>
-</div>
-
-<!-- PARTICLES BACKGROUND -->
-<div id="particles-js"></div>
-<script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
-
-<script>
-particlesJS("particles-js", {
-    particles: {
-        number: { value: 85 },
-        size: { value: 3 },
-        color: { value: "#58a6ff" },
-        line_linked: { enable: true, distance: 150, color: "#58a6ff", opacity: 0.4, width: 1 },
-        move: { speed: 2 }
-    }
-});
-</script>
-
-<!-- NAVIGATION -->
 <header>
-    <nav>
-        <div class="logo">AN</div>
-        <ul class="nav-links">
-            <li><a href="index.html#home">Home</a></li>
-            <li><a href="index.html#about">About</a></li>
-            <li><a href="index.html#skills">Skills</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="certifications.html">Certifications</a></li>
-            <li><a href="achievements.html">Achievements</a></li>
-            <li><a href="contacts.html">Contact</a></li>
-        </ul>
-    </nav>
+  <nav>
+    <div class="logo">AN</div>
+    <ul class="nav-links">
+      <li><a class="active" href="index.html#home">Home</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#skills">Skills</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="certifications.html">Certifications</a></li>
+      <li><a href="achievements.html">Achievements</a></li>
+      <li><a href="contacts.html">Contact</a></li>
+    </ul>
+  </nav>
 </header>
 
-<!-- HERO -->
 <section id="home" class="hero">
-
-  <div class="hero-content">
+  <div class="hero-content" data-aos="fade-right">
     <h1>Hi, I'm <span class="highlight">Abishek Narayanamoorthi</span></h1>
     <h2>SOC Analyst · Blue-Team Detection · Cybersecurity Engineer</h2>
+
     <p class="subtitle">
       Threat Detection · SIEM · DFIR · AI Security Automation
     </p>
@@ -73,49 +43,40 @@ particlesJS("particles-js", {
     </div>
   </div>
 
-  <div class="hero-photo">
+  <div class="hero-photo" data-aos="fade-left">
     <img src="assets/profile.jpg" class="profile-circle">
   </div>
-
 </section>
 
-
-<!-- ABOUT -->
 <section id="about" class="section">
-    <h2 class="section-title">About Me</h2>
-
-    <p>
-   I am a cybersecurity graduate student at Saint Louis University (MS, Dec 2026)
-with expertise in SOC operations, threat detection, and AI-driven automation.
-Hands-on experience with Blue Team tools, network defense, and incident response
-through professional projects, CTFs, and global security conferences.
-Ranked in top 2% on TryHackMe and recognised with selective international scholarships.
-    </p>
+  <h2 class="section-title">About Me</h2>
+  <p>
+    I am a cybersecurity graduate student at Saint Louis University (MS, Dec 2026)
+    with expertise in SOC operations, threat detection, and AI-driven automation.
+    Hands-on experience with Blue Team tools, network defense, and incident response
+    through professional projects, CTFs, and global security conferences.
+    Ranked in top 2% on TryHackMe and recognised with selective international scholarships.
+  </p>
 </section>
 
-<!-- SKILLS -->
 <section id="skills" class="section">
-    <h2 class="section-title">Technical Skills</h2>
+  <h2 class="section-title">Technical Skills</h2>
 
-    <div class="skills-grid">
-        <div class="skill-card"><h3>SOC & Detection</h3><p>Threat Hunting, SIEM, Sysmon, DFIR</p></div>
-        <div class="skill-card"><h3>Tools</h3><p>Splunk, Wazuh, Wireshark, Burp Suite</p></div>
-        <div class="skill-card"><h3>Programming</h3><p>Python, Bash, SQL</p></div>
-        <div class="skill-card"><h3>Automation</h3><p>LLMs, Pipelines, JSON automation</p></div>
-        <div class="skill-card"><h3>Security Domains</h3><p>Threat Detection, Network Security</p></div>
-    </div>
+  <div class="skills-grid" data-aos="fade-up">
+    <div class="skill-card"><h3>SOC & Detection</h3><p>Threat Hunting, SIEM, Sysmon, DFIR</p></div>
+    <div class="skill-card"><h3>Tools</h3><p>Splunk, Wazuh, Wireshark, Burp Suite</p></div>
+    <div class="skill-card"><h3>Programming</h3><p>Python, Bash, SQL</p></div>
+    <div class="skill-card"><h3>Automation</h3><p>LLMs, Pipelines, JSON automation</p></div>
+    <div class="skill-card"><h3>Security Domains</h3><p>Threat Detection, Network Security</p></div>
+  </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
-    <p>© 2025 Abishek Narayanamoorthi • Cybersecurity Portfolio</p>
+  <p>© 2025 Abishek Narayanamoorthi • Cybersecurity Portfolio</p>
 </footer>
 
-<!-- AOS -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-
-<!-- MAIN JS -->
 <script src="assets/script.js"></script>
-</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>AOS.init({ duration: 1200 });</script>
 </body>
 </html>
