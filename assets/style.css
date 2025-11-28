@@ -436,3 +436,22 @@ body.dark {
   background: #333;
   color: #fff;
 }
+/* ---------------- HERO SECTION (Profile + Layout) ---------------- */
+
+.profile-circle {
+  width: 280px;
+  border-radius: 50%;
+  border: 6px solid #4a8af4;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.hero-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+
+
