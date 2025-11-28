@@ -620,6 +620,21 @@ body.dark {
   background: #3a74d5;
 }
 
+.achievement-card {
+  background: #fff;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  margin-bottom: 25px;
+  max-width: 900px;
+  margin-inline: auto;
+  text-align: left;
+}
+
+.achievement-card h3 {
+  color: #4a8af4;
+  margin-bottom: 10px;
+}
 
 /* DARK MODE SUPPORT */
 body.dark .cert-card {
