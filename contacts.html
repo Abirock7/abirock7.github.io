@@ -3,12 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact | Abishek</title>
+  <title>Contact | Abishek Narayanamoorthi</title>
 
   <link rel="stylesheet" href="assets/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
   <script src="https://unpkg.com/scrollreveal"></script>
 
-  <!-- EmailJS -->
+  <!-- EMAILJS -->
   <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
   <script>
     emailjs.init("JDuXFTC6nyMtcC5RF");
@@ -17,26 +18,30 @@
 
 <body>
 
+<!-- NAVIGATION -->
 <header>
   <nav>
     <div class="logo">AN</div>
     <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html#home">Home</a></li>
+      <li><a href="index.html#about">About</a></li>
       <li><a href="projects.html">Projects</a></li>
       <li><a href="certifications.html">Certifications</a></li>
       <li><a href="achievements.html">Achievements</a></li>
-      <li><a href="contacts.html" class="active">Contact</a></li>
+      <li><a class="active" href="contacts.html">Contact</a></li>
     </ul>
   </nav>
 </header>
 
-<section class="section">
+<!-- CONTACT SECTION -->
+<section class="section" style="padding-top:140px;">
   <h2 class="section-title">Get in Touch</h2>
+  <p class="section-subtitle">Feel free to contact me regarding collaboration, internships, or cybersecurity projects.</p>
 
   <div class="contact-wrapper">
 
-    <!-- FORM -->
-    <div class="contact-form-card">
+    <!-- CONTACT FORM -->
+    <div class="contact-form-card" data-aos="fade-right">
       <form id="contactForm">
 
         <div class="form-row">
@@ -50,10 +55,14 @@
 
         <button type="submit" class="project-btn">Send Message</button>
       </form>
+
+      <!-- SUCCESS POPUP -->
+      <div id="successPopup" class="popup">Message Sent Successfully ✔</div>
     </div>
 
-    <!-- INFO -->
-    <div class="contact-info">
+    <!-- CONTACT INFO -->
+    <div class="contact-info" data-aos="fade-left">
+
       <div class="info-box">
         <h3>Email</h3>
         <p>abisheknarayanamoorthi0218@gmail.com</p>
@@ -61,28 +70,49 @@
 
       <div class="info-box">
         <h3>LinkedIn</h3>
-        <a href="https://linkedin.com/in/abishek-narayanamoorthi-baa59b1aa" target="_blank">Open Profile</a>
+        <a href="https://linkedin.com/in/abishek-narayanamoorthi-baa59b1aa" target="_blank">
+          Visit Profile →
+        </a>
       </div>
 
       <div class="info-box">
         <h3>GitHub</h3>
         <a href="https://github.com/Abirock7" target="_blank">github.com/Abirock7</a>
       </div>
+
     </div>
 
   </div>
-
 </section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2025 Abishek Narayanamoorthi • Cybersecurity Portfolio</p>
+</footer>
+
+<!-- AOS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+  AOS.init({ duration: 1200 });
+</script>
 
 <script src="assets/script.js"></script>
 
+<!-- EMAILJS FORM SUBMIT -->
 <script>
 document.getElementById("contactForm").addEventListener("submit", function(e){
-  e.preventDefault();
+    e.preventDefault();
 
-  emailjs.sendForm("service_fupqn7e", "template_qfnpq0u", this)
-  .then(() => alert("Message sent successfully!"))
-  .catch(() => alert("Failed to send message."));
+    emailjs.sendForm("service_fupqn7e", "template_qfnpq0u", this)
+      .then(() => {
+        const popup = document.getElementById("successPopup");
+        popup.classList.add("show");
+
+        setTimeout(() => { popup.classList.remove("show"); }, 2500);
+
+        document.getElementById("contactForm").reset();
+      })
+      .catch(() => alert("Message failed to send. Please try again."));
 });
 </script>
 
