@@ -51,31 +51,19 @@ document.addEventListener("DOMContentLoaded", () => {
             document.body.classList.toggle("dark");
         });
     }
-    // ---------------- CERTIFICATION MODAL ----------------
-function openModal(src) {
-  document.getElementById("certModal").style.display = "block";
-  document.getElementById("modalImg").src = src;
+/* --------------------- Certificate Modal --------------------- */
+
+function openCertModal(imgName) {
+    document.getElementById("modalCertImg").src = "assets/" + imgName;
+    document.getElementById("certModal").style.display = "flex";
 }
 
-function closeModal() {
-  document.getElementById("certModal").style.display = "none";
+function closeCertModal() {
+    document.getElementById("certModal").style.display = "none";
 }
-    /* SCROLLREVEAL */
-    if (typeof ScrollReveal !== "undefined") {
-        const sr = ScrollReveal({
-            distance: "40px",
-            duration: 1200,
-            easing: "ease-out",
-            interval: 150,
-            reset: false
-        });
 
-        sr.reveal(".section-title", { origin: "top" });
-        sr.reveal(".skill-card", { origin: "bottom" });
-        sr.reveal(".project-card", { origin: "left" });
-        sr.reveal(".cert-card", { origin: "bottom" });
-        sr.reveal(".timeline-item", { origin: "right" });
-        sr.reveal(".contact-form-card", { origin: "left" });
-    }
+window.onclick = function (event) {
+    let modal = document.getElementById("certModal");
+    if (event.target === modal) modal.style.display = "none";
+};
 
-});
