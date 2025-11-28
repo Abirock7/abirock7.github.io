@@ -110,3 +110,11 @@ window.addEventListener("click", function (event) {
 if (typeof AOS !== "undefined") {
   AOS.init({ duration: 1200 });
 }
+function openModal(src) {
+    document.getElementById("imgModal").style.display = "block";
+    document.getElementById("modalImage").src = src;
+}
+
+function closeModal() {
+    document.getElementById("imgModal").style.display = "none";
+}
