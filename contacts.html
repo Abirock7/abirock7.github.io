@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact | Abishek Narayanamoorthi</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+
+<!-- EmailJS -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>
+(function(){
+  emailjs.init("JDuXFTC6nyMtcC5RF");  // replace with your EmailJS public key
+})();
+</script>
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header>
+  <nav>
+    <div class="logo">AN</div>
+    <ul class="nav-links">
+      <li><a href="index.html#home">Home</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#skills">Skills</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="certifications.html">Certifications</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+
+<!-- CONTACT SECTION -->
+<section class="section" style="padding-top:120px;">
+  <h2 class="section-title">Get in Touch</h2>
+  <p style="color:#555; max-width:600px; margin:10px auto;">I would love to hear from you.</p>
+
+  <div class="contact-container">
+
+    <!-- LEFT: FORM -->
+    <div class="contact-form-card">
+
+      <form id="contact-form">
+
+        <div class="form-row">
+          <input type="text" name="name" placeholder="Your Name" required>
+          <input type="email" name="email" placeholder="Your Email" required>
+        </div>
+
+        <input type="text" name="subject" placeholder="Subject" required>
+
+        <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+
+        <button type="submit" class="btn-primary" style="width:180px; margin-top:10px;">
+          Send Message
+        </button>
+
+      </form>
+    </div>
+
+    <!-- RIGHT: CONTACT INFO -->
+    <div class="contact-info-right">
+
+      <div class="info-box">
+        <h4>📞 Phone</h4>
+        <p>+1 (314) 267-1066</p>
+      </div>
+
+      <div class="info-box">
+        <h4>📧 Email</h4>
+        <p>abisheknarayanamoorthi0218@gmail.com</p>
+      </div>
+
+      <div class="info-box">
+        <h4>📍 Location</h4>
+        <p>Saint Louis, Missouri (United States)</p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<footer>
+  <p>© 2025 Abishek Narayanamoorthi • Cybersecurity Portfolio</p>
+</footer>
+
+
+<!-- EMAILJS SEND SCRIPT -->
+<script>
+document.getElementById("contact-form").addEventListener("submit", function(event) {
+  event.preventDefault();
+
+  emailjs.sendForm("service_fupqn7e", "template_qfnpq0u", this)
+    .then(() => {
+      alert("Message sent successfully!");
+      this.reset();
+    }, (err) => {
+      alert("Failed to send message: " + JSON.stringify(err));
+    });
+});
+</script>
+
+</body>
+</html>
