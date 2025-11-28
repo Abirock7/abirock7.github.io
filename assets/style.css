@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #0a0f1f;
+    color: white;
+}
+
+header {
+    background: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    padding: 10px 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li a {
+    padding: 10px 20px;
+    color: #9ecbff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+nav ul li a:hover {
+    color: #00b7ff;
+    text-shadow: 0 0 10px #00b7ff;
+}
+
+.logo {
+    color: #00b7ff;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh;
+    padding: 120px 8%;
+}
+
+.hero .content h1 {
+    font-size: 45px;
+}
+
+.blue {
+    color: #00b7ff;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 22px;
+    margin-top: 20px;
+    background: #00b7ff;
+    color: black;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.section {
+    padding: 80px 8%;
+    text-align: center;
+}
+
+.skills-grid, .cert-grid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    margin-top: 30px;
+}
+
+.skill-card, .project-card {
+    background: #111829;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #00b7ff;
+    transition: 0.3s;
+}
+
+.skill-card:hover, .project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px #00b7ff;
+}
+
+.cert-grid img {
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid #00b7ff;
+}
+
+.project-card a {
+    color: #00b7ff;
+    text-decoration: none;
+}
