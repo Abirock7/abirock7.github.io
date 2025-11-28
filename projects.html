@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Projects | Abishek</title>
-<link rel="stylesheet" href="assets/style.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
-<script src="https://unpkg.com/scrollreveal"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects | Abishek Narayanamoorthi</title>
+
+  <link rel="stylesheet" href="assets/style.css" />
+  <script src="https://unpkg.com/scrollreveal"></script>
 </head>
 
 <body>
@@ -16,51 +16,66 @@
     <div class="logo">AN</div>
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#skills">Skills</a></li>
       <li><a href="projects.html" class="active">Projects</a></li>
       <li><a href="certifications.html">Certifications</a></li>
       <li><a href="achievements.html">Achievements</a></li>
-      <li><a href="timeline.html">Timeline</a></li>
       <li><a href="contacts.html">Contact</a></li>
-      <li><button id="darkToggle">🌙</button></li>
     </ul>
   </nav>
 </header>
 
-<section class="section" style="padding-top:120px;">
-  <h2 class="section-title" data-aos="fade-up">My Projects</h2>
+<section class="section">
+  <h2 class="section-title">My Projects</h2>
+  <p class="section-subtitle">A selection of my hands-on cybersecurity engineering, automation, and SOC-style projects.</p>
 
-  <div class="projects-grid">
-
-    <!-- Project 1 -->
-    <div class="project-card" data-aos="fade-up">
-      <h3>🔵 AI One-Click Security Triage</h3>
-      <p>Automated workflow combining Nmap → JSON → LLM analysis → Dashboard insights.</p>
-      <a href="https://github.com/Abirock7/ai-triage" class="project-link" target="_blank">View Project →</a>
+  <!-- PROJECT 1 -->
+  <div class="project-wide">
+    <div class="project-wide-text">
+      <h3>AI-Powered Security Triage Tool</h3>
+      <p>
+        Automated Nmap + Nessus scanning pipeline with JSON normalization,
+        LLM-based vulnerability scoring, and dashboard visualization.
+        Uses FastAPI backend, SQLite store, and AI-driven insights.
+      </p>
+      <a href="https://github.com/Abirock7/ai-triage" class="project-btn" target="_blank">View on GitHub</a>
     </div>
 
-    <!-- Project 2 -->
-    <div class="project-card" data-aos="fade-up" data-aos-delay="100">
-      <h3>🟦 Splunk Detection Engineering</h3>
-      <p>Custom SPL detections mapped to MITRE ATT&CK with credential abuse, PowerShell events and TTP mapping.</p>
-    </div>
-
-    <!-- Project 3 -->
-    <div class="project-card" data-aos="fade-up" data-aos-delay="200">
-      <h3>🔥 NCL & CTF Writeups</h3>
-      <p>Top 124 rank. Packet forensics, OSINT, exploitation and incident response writeups.</p>
-      <a href="https://medium.com/@abishekmoorthi711" target="_blank" class="project-link">Read →</a>
-    </div>
-
+    <img src="assets/triage_dashboard.png" class="project-wide-img" alt="AI Security Triage Screenshot">
+     <img src="assets/triage_dashboard1.png" class="project-wide-img" alt="AI Security Triage Screenshot">
   </div>
+
+  <!-- PROJECT 2 -->
+  <div class="project-wide">
+    <div class="project-wide-text">
+      <h3>Splunk Detection Engineering Dashboards</h3>
+      <p>
+        Built SIEM dashboards for SSH brute force, DNS tunneling, Cloudflare logs,
+        and web traffic anomaly detection with custom SPL queries and correlation rules.
+      </p>
+      <a href="assets/Web Traffic Logs _ Splunk 10.0.2.pdf" target="_blank" class="project-btn">View Dashboard</a>
+    </div>
+
+    <img src="assets/splunk_web.png" class="project-wide-img" alt="Splunk Dashboard">
+  </div>
+
+  <!-- PROJECT 3 -->
+  <div class="project-wide">
+    <div class="project-wide-text">
+      <h3>Cloudflare WAF Log Analysis</h3>
+      <p>
+        Parsed Cloudflare HTTP logs in Splunk to detect XSS, SQLi, LFI, brute force login attempts,
+        and automated detection patterns using field-aware SPL and regex pipelines.
+      </p>
+      <a href="assets/cloudfare logs dashboard _ Splunk 10.0.2.pdf" class="project-btn" target="_blank">View Cloudflare Report</a>
+    </div>
+
+    <img src="assets/cloudflare.png" class="project-wide-img" alt="Cloudflare Log Screenshot">
+  </div>
+
 </section>
 
-<footer>
-  <p>© 2025 Abishek • Cybersecurity Portfolio</p>
-</footer>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-<script>AOS.init();</script>
 <script src="assets/script.js"></script>
-
 </body>
 </html>
