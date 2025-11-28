@@ -269,30 +269,54 @@ h2 {
 /* ----------------------------------------------------------
    CONTACT SECTION
 ----------------------------------------------------------- */
-.contact-card {
-  background: #ffffff;
-  padding: 25px 30px;
+.contact-container {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.contact-form-card {
+  background: #fff;
+  padding: 30px;
   width: 450px;
-  max-width: 95%;
-  margin: 25px auto;
   border-radius: 12px;
-  text-align: left;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.10);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
-.contact-card p {
-  font-size: 17px;
-  margin: 12px 0;
+.contact-form-card input,
+.contact-form-card textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 16px;
 }
 
-.contact-card a {
+.form-row {
+  display: flex;
+  gap: 10px;
+}
+
+.contact-info-right {
+  width: 300px;
+}
+
+.info-box {
+  background: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.info-box h4 {
   color: #4c8bf5;
-  text-decoration: none;
+  margin-bottom: 5px;
 }
 
-.contact-card a:hover {
-  text-decoration: underline;
-}
 
 /* ----------------------------------------------------------
    FOOTER
