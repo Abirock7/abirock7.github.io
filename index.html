@@ -8,7 +8,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/style.css">
 
-<!-- Particles.js -->
 <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
 </head>
 
@@ -20,10 +19,10 @@
 <script>
 particlesJS("particles-js", {
   particles: {
-    number: { value: 95 },
-    size: { value: 2.8 },
-    color: { value: "#4c8bf5" },
-    line_linked: { enable: true, distance: 140, color: "#4c8bf5", opacity: 0.4, width: 1 },
+    number: { value: 90 },
+    size: { value: 3 },
+    color: { value: "#58a6ff" },
+    line_linked: { enable: true, distance: 150, color: "#58a6ff", opacity: 0.4, width: 1 },
     move: { speed: 2 }
   }
 });
@@ -34,7 +33,7 @@ particlesJS("particles-js", {
   <nav>
     <div class="logo">AN</div>
     <ul class="nav-links">
-      <li><a href="#home">Home</a></li>
+      <li><a href="#home" class="active">Home</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#projects">Projects</a></li>
@@ -44,9 +43,10 @@ particlesJS("particles-js", {
   </nav>
 </header>
 
+
 <!-- HERO SECTION -->
 <section id="home" class="hero">
-  <img src="assets/img/PROFILE.jpg" class="avatar">
+  <img src="assets/profile.jpg" class="avatar">
 
   <h1>Hi, I'm <span class="highlight">Abishek Narayanamoorthi</span></h1>
   <h2>SOC Analyst · Blue-Team Detection · Cybersecurity Engineer</h2>
@@ -64,24 +64,25 @@ particlesJS("particles-js", {
   </div>
 </section>
 
-<!-- ABOUT SECTION -->
+
+<!-- ABOUT -->
 <section id="about" class="section">
   <h2 class="section-title">About Me</h2>
 
   <p>
     I am a cybersecurity graduate student at Saint Louis University with hands-on experience in SOC operations, 
     threat detection, incident response, network security, and AI-driven security automation. I specialize in 
-    building detections, analyzing malicious behaviors, and implementing operational defenses aligned with 
-    MITRE ATT&CK.
+    building detections, analyzing malicious behaviors, and implementing defense strategies aligned with MITRE ATT&CK.
   </p>
 
   <p>
-    Recognized internationally with scholarships like Authenticate 2025 (Top 3 Global Selection) and Black Hat USA 2025, 
-    I actively build cybersecurity tools, dashboards, and automation pipelines to enhance enterprise defense capabilities.
+    Recognized globally with scholarships like Authenticate 2025 (Top 3 Worldwide) and Black Hat USA 2025, 
+    I actively develop cybersecurity tools, dashboards, and automation pipelines to strengthen enterprise defense.
   </p>
 </section>
 
-<!-- SKILLS SECTION -->
+
+<!-- SKILLS -->
 <section id="skills" class="section">
   <h2 class="section-title">Technical Skills</h2>
 
@@ -93,7 +94,7 @@ particlesJS("particles-js", {
     </div>
 
     <div class="skill-card">
-      <h3>Tools</h3>
+      <h3>Security Tools</h3>
       <p>Splunk · Wazuh · Wireshark · Burp Suite</p>
     </div>
 
@@ -104,7 +105,7 @@ particlesJS("particles-js", {
 
     <div class="skill-card">
       <h3>Automation</h3>
-      <p>LLMs · Python pipelines · JSON automation</p>
+      <p>LLMs · Automation Pipelines · JSON Automation</p>
     </div>
 
     <div class="skill-card">
@@ -115,15 +116,16 @@ particlesJS("particles-js", {
   </div>
 </section>
 
-<!-- PROJECTS SECTION -->
+
+<!-- PROJECTS -->
 <section id="projects" class="section">
   <h2 class="section-title">Projects</h2>
 
   <div class="project-card">
     <h3>🔵 AI One-Click Security Triage Tool</h3>
     <p>
-      Fully automated workflow: Nmap → JSON → Python → LLM analysis → dashboard visualization.  
-      Improves vulnerability triage with AI-driven severity & exploitability reasoning.
+      Fully automated workflow integrating Nmap → JSON → Python → LLM analysis → dashboard insights.
+      Enhances vulnerability triage with AI-driven severity reasoning.
     </p>
     <a href="https://github.com/Abirock7/ai-triage" class="project-link" target="_blank">View Project →</a>
   </div>
@@ -131,42 +133,34 @@ particlesJS("particles-js", {
   <div class="project-card">
     <h3>🟦 Splunk Detection Engineering</h3>
     <p>
-      Created custom SPL detections mapped to MITRE ATT&CK: credential abuse, 
-      PowerShell attacks, lateral movement, ransomware behaviors, and Sysmon event blacklists.
+      Developed SPL detections mapped to MITRE ATT&CK for credential abuse, PowerShell compromise, 
+      lateral movement, ransomware indicators, and Sysmon-based threat hunting.
     </p>
   </div>
 
   <div class="project-card">
     <h3>🔥 NCL & CTF Writeups (Top 124/8573)</h3>
     <p>
-      National Cyber League & CTF challenge writeups covering exploitation, 
-      Linux privilege escalation, OSINT, forensic packet analysis, and SOC-style investigations.
+      Practical writeups covering OSINT, packet forensics, exploitation, privilege escalation, and incident investigation.
     </p>
     <a href="https://medium.com/@abishekmoorthi711" class="project-link" target="_blank">Read Writeups →</a>
   </div>
 
 </section>
 
-<!-- CONTACT SECTION -->
+
+<!-- CONTACT -->
 <section id="contact" class="section">
   <h2 class="section-title">Contact</h2>
 
   <div class="contact-card">
     <p><strong>Email:</strong> abisheknarayanamoorthi0218@gmail.com</p>
-    <p>
-      <strong>LinkedIn:</strong>
-      <a href="http://www.linkedin.com/in/abishek-narayanamoorthi-baa59b1aa" target="_blank">View Profile</a>
-    </p>
-    <p>
-      <strong>GitHub:</strong>
-      <a href="https://github.com/Abirock7" target="_blank">github.com/Abirock7</a>
-    </p>
-    <p>
-      <strong>Medium:</strong>
-      <a href="https://medium.com/@abishekmoorthi711" target="_blank">View Articles</a>
-    </p>
+    <p><strong>LinkedIn:</strong> <a href="http://www.linkedin.com/in/abishek-narayanamoorthi-baa59b1aa" target="_blank">View Profile</a></p>
+    <p><strong>GitHub:</strong> <a href="https://github.com/Abirock7" target="_blank">Github.com/Abirock7</a></p>
+    <p><strong>Medium:</strong> <a href="https://medium.com/@abishekmoorthi711" target="_blank">View Articles</a></p>
   </div>
 </section>
+
 
 <footer>
   <p>© 2025 Abishek Narayanamoorthi • Cybersecurity Portfolio</p>
