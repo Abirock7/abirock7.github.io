@@ -3,110 +3,144 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Contact | Abishek Narayanamoorthi</title>
+<title>Contact | Abishek</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/style.css">
 
+<!-- AOS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+<!-- ScrollReveal -->
+<script src="https://unpkg.com/scrollreveal"></script>
+
 <!-- EmailJS -->
-<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-<script>
-(function(){
-  emailjs.init("JDuXFTC6nyMtcC5RF");  // replace with your EmailJS public key
-})();
-</script>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
 </head>
 
 <body>
 
-<!-- NAVBAR -->
 <header>
   <nav>
     <div class="logo">AN</div>
     <ul class="nav-links">
-      <li><a href="index.html#home">Home</a></li>
-      <li><a href="index.html#about">About</a></li>
-      <li><a href="index.html#skills">Skills</a></li>
+      <li><a href="index.html">Home</a></li>
       <li><a href="projects.html">Projects</a></li>
       <li><a href="certifications.html">Certifications</a></li>
-      <li><a href="contact.html" class="active">Contact</a></li>
+      <li><a href="achievements.html">Achievements</a></li>
+      <li><a href="timeline.html">Timeline</a></li>
+      <li><a href="contacts.html" class="active">Contact</a></li>
+      <li><button id="darkToggle">🌙</button></li>
     </ul>
   </nav>
 </header>
 
+<section id="contact" class="section" style="padding-top:130px;">
+  <h2 class="section-title" data-aos="fade-up">Get In Touch</h2>
+  <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
+    I’d love to hear from you. Whether it's a project, opportunity or anything else — feel free to reach out.
+  </p>
 
-<!-- CONTACT SECTION -->
-<section class="section" style="padding-top:120px;">
-  <h2 class="section-title">Get in Touch</h2>
-  <p style="color:#555; max-width:600px; margin:10px auto;">I would love to hear from you.</p>
+  <div class="contact-wrapper">
 
-  <div class="contact-container">
+      <!-- FORM SECTION -->
+      <form id="contactForm" class="contact-form-card" data-aos="fade-right">
+          <label>Your Name</label>
+          <input type="text" id="name" required placeholder="Enter your name">
 
-    <!-- LEFT: FORM -->
-    <div class="contact-form-card">
+          <label>Your Email</label>
+          <input type="email" id="email" required placeholder="Enter your email">
 
-      <form id="contact-form">
+          <label>Subject</label>
+          <input type="text" id="subject" required placeholder="Subject">
 
-        <div class="form-row">
-          <input type="text" name="name" placeholder="Your Name" required>
-          <input type="email" name="email" placeholder="Your Email" required>
-        </div>
+          <label>Your Message</label>
+          <textarea id="message" rows="5" required placeholder="Write your message..."></textarea>
 
-        <input type="text" name="subject" placeholder="Subject" required>
-
-        <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
-
-        <button type="submit" class="btn-primary" style="width:180px; margin-top:10px;">
-          Send Message
-        </button>
-
+          <button type="submit" class="btn-primary" style="width:100%; margin-top:10px;">Send Message</button>
       </form>
-    </div>
 
-    <!-- RIGHT: CONTACT INFO -->
-    <div class="contact-info-right">
+      <!-- INFO SECTION -->
+      <div class="contact-info" data-aos="fade-left">
 
-      <div class="info-box">
-        <h4>📞 Phone</h4>
-        <p>+1 (314) 267-1066</p>
+          <div class="info-box">
+              <h3>📧 Email</h3>
+              <p>abisheknarayanamoorthi0218@gmail.com</p>
+          </div>
+
+          <div class="info-box">
+              <h3>💼 LinkedIn</h3>
+              <a href="https://www.linkedin.com/in/abishek-narayanamoorthi-baa59b1aa" target="_blank">View Profile</a>
+          </div>
+
+          <div class="info-box">
+              <h3>🐙 GitHub</h3>
+              <a href="https://github.com/Abirock7" target="_blank">github.com/Abirock7</a>
+          </div>
+
+          <div class="info-box">
+              <h3>✍ Medium</h3>
+              <a href="https://medium.com/@abishekmoorthi711" target="_blank">View Articles</a>
+          </div>
+
+          <div class="info-box">
+              <h3>📍 Location</h3>
+              <p>St. Louis, USA</p>
+          </div>
+
       </div>
-
-      <div class="info-box">
-        <h4>📧 Email</h4>
-        <p>abisheknarayanamoorthi0218@gmail.com</p>
-      </div>
-
-      <div class="info-box">
-        <h4>📍 Location</h4>
-        <p>Saint Louis, Missouri (United States)</p>
-      </div>
-
-    </div>
 
   </div>
-
 </section>
 
+<!-- SUCCESS / ERROR POPUPS -->
+<div id="popup-success" class="popup">Message sent successfully! 🎉</div>
+<div id="popup-error" class="popup">Something went wrong. Try again.</div>
 
 <footer>
   <p>© 2025 Abishek Narayanamoorthi • Cybersecurity Portfolio</p>
 </footer>
 
+<!-- AOS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>AOS.init();</script>
 
-<!-- EMAILJS SEND SCRIPT -->
+<script src="assets/script.js"></script>
+
 <script>
-document.getElementById("contact-form").addEventListener("submit", function(event) {
-  event.preventDefault();
+emailjs.init("JDuXFTC6nyMtcC5RF");
 
-  emailjs.sendForm("service_fupqn7e", "template_qfnpq0u", this)
-    .then(() => {
-      alert("Message sent successfully!");
-      this.reset();
-    }, (err) => {
-      alert("Failed to send message: " + JSON.stringify(err));
-    });
+document.getElementById("contactForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  const params = {
+      from_name: document.getElementById("name").value,
+      email_id: document.getElementById("email").value,
+      subject: document.getElementById("subject").value,
+      message: document.getElementById("message").value
+  };
+
+  emailjs.send("service_fupqn7e", "template_qfnpq0u", params)
+  .then(() => {
+      showPopup("popup-success");
+      document.getElementById("contactForm").reset();
+  })
+  .catch(() => {
+      showPopup("popup-error");
+  });
 });
+
+function showPopup(id) {
+  const popup = document.getElementById(id);
+  popup.style.display = "block";
+  popup.classList.add("show");
+
+  setTimeout(() => {
+    popup.style.display = "none";
+    popup.classList.remove("show");
+  }, 3000);
+}
 </script>
 
 </body>
