@@ -381,3 +381,32 @@ footer {
   color: #888;
   font-size: 15px;
 }
+/* FIX PROJECT OVERLAP */
+.project-wide {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 40px;
+  margin: 50px auto;
+  border-radius: 16px;
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(12px);
+  gap: 40px;
+  min-height: 360px;       /* ★ Prevent overlap */
+}
+
+.project-text {
+  width: 45%;
+}
+
+.gallery {
+  width: 55%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.gallery img {
+  width: 48%;
+  border-radius: 12px;
+}
