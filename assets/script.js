@@ -1,120 +1,81 @@
 /* ==========================================================
-   PRELOADER (Fix for infinite loading)
+   PRELOADER REMOVAL
 =========================================================== */
 window.addEventListener("load", () => {
-  const preloader = document.getElementById("preloader");
-  if (preloader) {
-    preloader.style.opacity = "0";
-    setTimeout(() => { preloader.style.display = "none"; }, 400);
+  const pre = document.getElementById("preloader");
+  if (pre) {
+    pre.style.opacity = "0";
+    setTimeout(() => pre.style.display = "none", 400);
   }
 });
 
-
 /* ==========================================================
-   SMOOTH SCROLLING FOR NAV LINKS
+   MATRIX BACKGROUND ANIMATION
 =========================================================== */
-document.querySelectorAll("a[href^='#']").forEach(anchor => {
-  anchor.addEventListener("click", function (e) {
-    const target = document.querySelector(this.getAttribute("href"));
+const canvas = document.getElementById("matrix-bg");
+const ctx = canvas.getContext("2d");
 
-    if (target) {
-      e.preventDefault();
-      target.scrollIntoView({ behavior: "smooth" });
+canvas.height = window.innerHeight;
+canvas.width = window.innerWidth;
+
+const chars = "01";
+const fontSize = 16;
+const columns = canvas.width / fontSize;
+
+const drops = Array(Math.floor(columns)).fill(1);
+
+function drawMatrix() {
+  ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+  ctx.fillStyle = "#4aa8ff";
+  ctx.font = fontSize + "px monospace";
+
+  drops.forEach((y, i) => {
+    const text = chars[Math.floor(Math.random() * chars.length)];
+    ctx.fillText(text, i * fontSize, y * fontSize);
+
+    if (y * fontSize > canvas.height && Math.random() > 0.95) {
+      drops[i] = 0;
     }
+    drops[i]++;
   });
-});
-
-
-/* ==========================================================
-   ACTIVE NAV HIGHLIGHT ON SCROLL
-=========================================================== */
-window.addEventListener("scroll", () => {
-  let scrollPos = window.scrollY + 120;
-
-  document.querySelectorAll("section").forEach(section => {
-    if (
-      scrollPos > section.offsetTop &&
-      scrollPos < section.offsetTop + section.offsetHeight
-    ) {
-      const id = section.getAttribute("id");
-      document.querySelectorAll(".nav-links a").forEach(a => a.classList.remove("active"));
-
-      let link = document.querySelector(`.nav-links a[href="#${id}"]`);
-      if (link) link.classList.add("active");
-    }
-  });
-});
-
-
-/* ==========================================================
-   NAVBAR SHADOW ON SCROLL
-=========================================================== */
-const header = document.querySelector("header");
-window.addEventListener("scroll", () => {
-  if (window.scrollY > 50) {
-    header.style.boxShadow = "0 3px 15px rgba(0, 0, 0, 0.15)";
-  } else {
-    header.style.boxShadow = "none";
-  }
-});
-
-
-/* ==========================================================
-   SCROLLREVEAL ANIMATIONS
-=========================================================== */
-if (typeof ScrollReveal !== "undefined") {
-  const sr = ScrollReveal({
-    distance: "40px",
-    duration: 1200,
-    easing: "ease-out",
-    interval: 150
-  });
-
-  sr.reveal(".section-title", { origin: "top" });
-  sr.reveal(".skill-card", { origin: "bottom" });
-  sr.reveal(".project-wide", { origin: "left" });
-  sr.reveal(".cert-card", { origin: "bottom" });
-  sr.reveal(".achievement-card", { origin: "right" });
-  sr.reveal(".contact-form-card", { origin: "left" });
-  sr.reveal(".contact-info", { origin: "right" });
 }
 
+setInterval(drawMatrix, 50);
+
+/* Resize handler */
+window.addEventListener("resize", () => {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+});
 
 /* ==========================================================
-   CERTIFICATION MODAL (open/close)
+   IMAGE MODAL
 =========================================================== */
-function openCertModal(imgName) {
-  const modal = document.getElementById("certModal");
-  const img = document.getElementById("modalCertImg");
+function openModal(src) {
+  document.getElementById("imgModal").style.display = "flex";
+  document.getElementById("modalImg").src = src;
+}
 
-  img.src = "assets/" + imgName;
-  modal.style.display = "flex";
+function closeModal() {
+  document.getElementById("imgModal").style.display = "none";
+}
+
+window.openModal = openModal;
+window.closeModal = closeModal;
+
+/* ==========================================================
+   CERTIFICATION MODAL
+=========================================================== */
+function openCertModal(src) {
+  document.getElementById("certModal").style.display = "flex";
+  document.getElementById("certImage").src = src;
 }
 
 function closeCertModal() {
   document.getElementById("certModal").style.display = "none";
 }
 
-// Close modal when clicking outside content
-window.addEventListener("click", function (event) {
-  const modal = document.getElementById("certModal");
-  if (event.target === modal) {
-    modal.style.display = "none";
-  }
-});
-
-
-/* ==========================================================
-   AOS INIT
-=========================================================== */
-if (typeof AOS !== "undefined") {
-  AOS.init({ duration: 1200 });
-}
-function openModal(src) {
-    document.getElementById("imgModal").style.display = "block";
-    document.getElementById("modalImage").src = src;
-}
-
-function closeModal() {
-    document.getElementById("imgModal").style.display = "none";
-}
+window.openCertModal = openCertModal;
+window.closeCertModal = closeCertModal;
