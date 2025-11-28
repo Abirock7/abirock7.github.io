@@ -7,9 +7,8 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/style.css">
-<!-- ScrollReveal -->
+
 <script src="https://unpkg.com/scrollreveal"></script>
-</head>
 
 </head>
 <body>
@@ -22,9 +21,9 @@
       <li><a href="index.html#home">Home</a></li>
       <li><a href="index.html#about">About</a></li>
       <li><a href="index.html#skills">Skills</a></li>
-      <li><a href="index.html#projects">Projects</a></li>
-      <li><a href="certifications.html" class="active">Certifications</a></li>
-      <li><a href="index.html#contact">Contact</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a class="active" href="certifications.html">Certifications</a></li>
+      <li><a href="contacts.html">Contact</a></li>
     </ul>
   </nav>
 </header>
@@ -32,60 +31,65 @@
 <!-- PAGE TITLE -->
 <section class="section" style="padding-top:140px;">
   <h2 class="section-title">My Certifications</h2>
-
   <p style="font-size:17px; max-width:800px; margin:auto; color:#555;">
-    These certifications demonstrate my continuous learning, 
-    hands-on cybersecurity expertise, and commitment to Blue Team operations.
+    Click any certification to view it in full screen with an interactive modal preview.
   </p>
 </section>
 
 <!-- CERTIFICATION GRID -->
 <section class="section">
 
-  <div class="skills-grid" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));">
+  <div class="cert-grid">
 
-    <!-- CERT CARD 1 -->
-    <div class="skill-card">
-      <img src="assets/google_cybersecurity.png" style="width:100%; border-radius:10px;">
-      <h3 style="margin-top:15px;">Google Cybersecurity Professional Certificate</h3>
-      <p>Comprehensive cyber fundamentals covering SIEM, SOC workflow, detection, Linux, SQL, and defense strategies.</p>
+    <!-- CERT 1 -->
+    <div class="cert-card" onclick="openModal('assets/google_cybersecurity.png')">
+      <img src="assets/google_cybersecurity.png" alt="">
+      <h3>Google Cybersecurity Professional Certificate</h3>
     </div>
 
-    <!-- CERT CARD 2 -->
-    <div class="skill-card">
-      <img src="assets/google_cybersecurity_badge.png" style="width:100%; border-radius:10px;">
-      <h3 style="margin-top:15px;">Google Cybersecurity Badge</h3>
-      <p>Validated badge demonstrating applied knowledge in threat detection and SOC operations.</p>
+    <!-- CERT 2 -->
+    <div class="cert-card" onclick="openModal('assets/google_cybersecurity_badge.png')">
+      <img src="assets/google_cybersecurity_badge.png" alt="">
+      <h3>Google Cybersecurity Badge</h3>
     </div>
 
-    <!-- CERT CARD 3 -->
-    <div class="skill-card">
-      <img src="assets/google_data_analytics.png" style="width:100%; border-radius:10px;">
-      <h3 style="margin-top:15px;">Google Data Analytics Certificate</h3>
-      <p>Data analytics with SQL, dashboards, insights, and automation — useful for security analytics.</p>
+    <!-- CERT 3 -->
+    <div class="cert-card" onclick="openModal('assets/google_data_analytics.png')">
+      <img src="assets/google_data_analytics.png" alt="">
+      <h3>Google Data Analytics Certificate</h3>
     </div>
 
-    <!-- CERT CARD 4 -->
-    <div class="skill-card">
-      <img src="assets/tryhackme_soc.png" style="width:100%; border-radius:10px;">
-      <h3 style="margin-top:15px;">TryHackMe – SOC Level 1</h3>
-      <p>Validated skills in SIEM, incident response, Windows forensics, log analysis, threat detection.</p>
+    <!-- CERT 4 -->
+    <div class="cert-card" onclick="openModal('assets/tryhackme_soc.png')">
+      <img src="assets/tryhackme_soc.png" alt="">
+      <h3>TryHackMe – SOC Level 1</h3>
     </div>
 
-    <!-- CERT CARD 5 -->
-    <div class="skill-card">
-      <img src="assets/tryhackme_101.png" style="width:100%; border-radius:10px;">
-      <h3 style="margin-top:15px;">TryHackMe – Cyber Security 101</h3>
-      <p>Fundamental understanding of cybersecurity, networks, attacks, and security operations.</p>
+    <!-- CERT 5 -->
+    <div class="cert-card" onclick="openModal('assets/tryhackme_101.png')">
+      <img src="assets/tryhackme_101.png" alt="">
+      <h3>TryHackMe – Cyber Security 101</h3>
     </div>
 
   </div>
 
 </section>
 
+<!-- MODAL POPUP -->
+<div id="certModal" class="cert-modal">
+  <span class="close-btn" onclick="closeModal()">&times;</span>
+  <img id="modalImg" class="modal-content">
+  <a class="modal-drive-btn" target="_blank"
+     href="https://drive.google.com/drive/folders/1MCvQMTYwYPQBYMHiUjxCCvuZX5QWRHim?usp=sharing">
+     View on Google Drive →
+  </a>
+</div>
+
 <footer>
   <p>© 2025 Abishek Narayanamoorthi • Cybersecurity Portfolio</p>
 </footer>
+
+<script src="assets/script.js"></script>
 
 </body>
 </html>
