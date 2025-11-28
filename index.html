@@ -1,129 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Abishek Narayanamoorthi | Cybersecurity Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abishek Narayanamoorthi | Cybersecurity Portfolio</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/style.css">
-<!-- Particles.js -->
-<script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+    <!-- FONTS -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-<!-- AOS -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/style.css">
 
-<!-- ScrollReveal -->
-<script src="https://unpkg.com/scrollreveal"></script>
+    <!-- AOS Animation Library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
 
+    <!-- ScrollReveal -->
+    <script src="https://unpkg.com/scrollreveal"></script>
 </head>
+
 <body>
 
 <!-- PRELOADER -->
 <div id="preloader">
-  <div class="loader"></div>
+    <div class="loader"></div>
 </div>
 
-<!-- PARTICLES -->
+<!-- PARTICLES BACKGROUND -->
 <div id="particles-js"></div>
+<script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
 
 <script>
 particlesJS("particles-js", {
-  particles: {
-    number: { value: 90 },
-    size: { value: 3 },
-    color: { value: "#58a6ff" },
-    line_linked: { enable: true, distance: 150, color: "#58a6ff", opacity: 0.4, width: 1 },
-    move: { speed: 2 }
-  }
+    particles: {
+        number: { value: 85 },
+        size: { value: 3 },
+        color: { value: "#58a6ff" },
+        line_linked: { enable: true, distance: 150, color: "#58a6ff", opacity: 0.4, width: 1 },
+        move: { speed: 2 }
+    }
 });
 </script>
 
 <!-- NAVIGATION -->
 <header>
-  <nav>
-    <div class="logo">AN</div>
-    <ul class="nav-links">
-      <li><a href="#home" class="active">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="certifications.html">Certifications</a></li>
-      <li><a href="contacts.html">Contact</a></li>
-    </ul>
-  </nav>
+    <nav>
+        <div class="logo">AN</div>
+        <ul class="nav-links">
+            <li><a href="index.html#home">Home</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#skills">Skills</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="certifications.html">Certifications</a></li>
+            <li><a href="achievements.html">Achievements</a></li>
+            <li><a href="contacts.html">Contact</a></li>
+        </ul>
+    </nav>
 </header>
 
 <!-- HERO -->
-<section id="home" class="hero section">
-  <div class="hero-container">
+<section id="home" class="hero">
+    <div class="hero-container">
+        <div>
+            <h1>Hi, I'm <span class="highlight">Abishek Narayanamoorthi</span></h1>
+            <h2>SOC Analyst · Blue-Team Detection · Cybersecurity Engineer</h2>
+            <p class="subtitle">Threat Detection · SIEM · DFIR · AI Security Automation</p>
 
-    <div>
-      <h1>Hi, I'm <span class="highlight">Abishek Narayanamoorthi</span></h1>
+            <div class="hero-buttons">
+                <a href="projects.html" class="btn-primary">View Projects</a>
+                <a href="assets/resume.pdf" download class="btn-secondary">Download Resume</a>
+            </div>
+        </div>
 
-      <h2>SOC Analyst • Detection Engineering • Cybersecurity Automation</h2>
-
-      <p class="subtitle">
-        Blue-Team Defense · Threat Detection · DFIR · SIEM · AI Security
-      </p>
-
-      <div class="hero-buttons">
-        <a href="projects.html" class="btn-primary">View Projects</a>
-        <a href="assets/resume.pdf" download class="btn-secondary">Download Resume</a>
-      </div>
-
-      <div class="social-icons">
-        <a href="https://www.linkedin.com/in/abishek-narayanamoorthi-baa59b1aa" target="_blank">LinkedIn</a>
-        <a href="https://github.com/Abirock7" target="_blank">GitHub</a>
-        <a href="https://medium.com/@abishekmoorthi711" target="_blank">Medium</a>
-      </div>
+        <img src="assets/profile.jpg" class="profile-circle" alt="Abishek">
     </div>
-
-    <img src="assets/profile.jpg" class="profile-circle">
-  </div>
 </section>
 
 <!-- ABOUT -->
 <section id="about" class="section">
-  <h2 class="section-title">About Me</h2>
-  <p>I am a cybersecurity graduate student at Saint Louis University (MS, Dec 2026)
+    <h2 class="section-title">About Me</h2>
+
+    <p>
+   I am a cybersecurity graduate student at Saint Louis University (MS, Dec 2026)
 with expertise in SOC operations, threat detection, and AI-driven automation.
 Hands-on experience with Blue Team tools, network defense, and incident response
 through professional projects, CTFs, and global security conferences.
-Ranked in top 2% on TryHackMe and recognised with selective international scholarships..</p>
+Ranked in top 2% on TryHackMe and recognised with selective international scholarships.
+    </p>
 </section>
 
 <!-- SKILLS -->
 <section id="skills" class="section">
-  <h2 class="section-title">Technical Skills</h2>
+    <h2 class="section-title">Technical Skills</h2>
 
-  <div class="skills-grid">
-    <div class="skill-card"><h3>SOC & Detection</h3><p>Threat Hunting · SIEM · Sysmon · DFIR</p></div>
-    <div class="skill-card"><h3>Security Tools</h3><p>Splunk · Wazuh · Wireshark · Burp Suite</p></div>
-    <div class="skill-card"><h3>Programming</h3><p>Python · Bash · SQL</p></div>
-    <div class="skill-card"><h3>Automation</h3><p>LLMs · JSON Pipelines · Security Automation</p></div>
-    <div class="skill-card"><h3>Domains</h3><p>Threat Detection · Network Security</p></div>
-  </div>
+    <div class="skills-grid">
+        <div class="skill-card"><h3>SOC & Detection</h3><p>Threat Hunting, SIEM, Sysmon, DFIR</p></div>
+        <div class="skill-card"><h3>Tools</h3><p>Splunk, Wazuh, Wireshark, Burp Suite</p></div>
+        <div class="skill-card"><h3>Programming</h3><p>Python, Bash, SQL</p></div>
+        <div class="skill-card"><h3>Automation</h3><p>LLMs, Pipelines, JSON automation</p></div>
+        <div class="skill-card"><h3>Security Domains</h3><p>Threat Detection, Network Security</p></div>
+    </div>
 </section>
 
-<!-- CONTACT LINK -->
-<section id="contact" class="section">
-  <h2 class="section-title">Contact</h2>
-
-  <div class="contact-card">
-    <p><strong>Email:</strong> abisheknarayanamoorthi0218@gmail.com</p>
-    <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/abishek-narayanamoorthi-baa59b1aa" target="_blank">View Profile</a></p>
-    <p><strong>GitHub:</strong> <a href="https://github.com/Abirock7" target="_blank">Abirock7</a></p>
-    <p><strong>Medium:</strong> <a href="https://medium.com/@abishekmoorthi711" target="_blank">View Articles</a></p>
-  </div>
-</section>
-
+<!-- FOOTER -->
 <footer>
-  <p>© 2025 Abishek Narayanamoorthi • Cybersecurity Portfolio</p>
+    <p>© 2025 Abishek Narayanamoorthi • Cybersecurity Portfolio</p>
 </footer>
 
-<!-- JS -->
+<!-- AOS -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+<!-- MAIN JS -->
 <script src="assets/script.js"></script>
 
 </body>
