@@ -215,7 +215,10 @@ nav {
   color: #4aa8ff;
   margin-bottom: 12px;
 }
-
+.project-text a {
+  margin-top: 20px;
+  display: inline-block;
+}
 .gallery {
   width: 50%;
   display: grid;
