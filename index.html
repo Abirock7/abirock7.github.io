@@ -8,15 +8,24 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/style.css">
 
+<!-- Particles.js -->
 <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
 
+<!-- AOS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+<!-- ScrollReveal -->
+<script src="https://unpkg.com/scrollreveal"></script>
+
+</head>
 <body>
+
 <!-- PRELOADER -->
 <div id="preloader">
   <div class="loader"></div>
 </div>
 
-<!-- PARTICLES BACKGROUND -->
+<!-- PARTICLES -->
 <div id="particles-js"></div>
 
 <script>
@@ -39,24 +48,21 @@ particlesJS("particles-js", {
       <li><a href="#home" class="active">Home</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
+      <li><a href="projects.html">Projects</a></li>
       <li><a href="certifications.html">Certifications</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="contacts.html">Contact</a></li>
     </ul>
   </nav>
 </header>
 
-
-<!-- HERO SECTION -->
-<section id="home" class="hero section" data-aos="fade-up">
+<!-- HERO -->
+<section id="home" class="hero section">
   <div class="hero-container">
 
     <div>
       <h1>Hi, I'm <span class="highlight">Abishek Narayanamoorthi</span></h1>
 
-      <h2 class="typing">
-        SOC Analyst • Detection Engineering • Cybersecurity Automation
-      </h2>
+      <h2>SOC Analyst • Detection Engineering • Cybersecurity Automation</h2>
 
       <p class="subtitle">
         Blue-Team Defense · Threat Detection · DFIR · SIEM · AI Security
@@ -74,120 +80,49 @@ particlesJS("particles-js", {
       </div>
     </div>
 
-    <img src="assets/profile.jpg" class="profile-circle" data-aos="zoom-in">
-
+    <img src="assets/profile.jpg" class="profile-circle">
   </div>
 </section>
-
 
 <!-- ABOUT -->
 <section id="about" class="section">
   <h2 class="section-title">About Me</h2>
-
-  <p>
-    I am a cybersecurity graduate student at Saint Louis University with hands-on experience in SOC operations, 
-    threat detection, incident response, network security, and AI-driven security automation. I specialize in 
-    building detections, analyzing malicious behaviors, and implementing defense strategies aligned with MITRE ATT&CK.
-  </p>
-
-  <p>
-    Recognized globally with scholarships like Authenticate 2025 (Top 3 Worldwide) and Black Hat USA 2025, 
-    I actively develop cybersecurity tools, dashboards, and automation pipelines to strengthen enterprise defense.
-  </p>
+  <p>I am a cybersecurity graduate student at Saint Louis University...</p>
+  <p>Recognized globally with scholarships like Authenticate 2025, Black Hat USA 2025…</p>
 </section>
-
 
 <!-- SKILLS -->
 <section id="skills" class="section">
   <h2 class="section-title">Technical Skills</h2>
 
   <div class="skills-grid">
-
-    <div class="skill-card">
-      <h3>SOC & Detection</h3>
-      <p>Threat Hunting · SIEM · Sysmon · DFIR</p>
-    </div>
-
-    <div class="skill-card">
-      <h3>Security Tools</h3>
-      <p>Splunk · Wazuh · Wireshark · Burp Suite</p>
-    </div>
-
-    <div class="skill-card">
-      <h3>Programming</h3>
-      <p>Python · Bash · SQL</p>
-    </div>
-
-    <div class="skill-card">
-      <h3>Automation</h3>
-      <p>LLMs · Automation Pipelines · JSON Automation</p>
-    </div>
-
-    <div class="skill-card">
-      <h3>Security Domains</h3>
-      <p>Threat Detection · Network Security · Vulnerability Analysis</p>
-    </div>
-
+    <div class="skill-card"><h3>SOC & Detection</h3><p>Threat Hunting · SIEM · Sysmon · DFIR</p></div>
+    <div class="skill-card"><h3>Security Tools</h3><p>Splunk · Wazuh · Wireshark · Burp Suite</p></div>
+    <div class="skill-card"><h3>Programming</h3><p>Python · Bash · SQL</p></div>
+    <div class="skill-card"><h3>Automation</h3><p>LLMs · JSON Pipelines · Security Automation</p></div>
+    <div class="skill-card"><h3>Domains</h3><p>Threat Detection · Network Security</p></div>
   </div>
 </section>
 
-
-<!-- PROJECTS -->
-<section id="projects" class="section">
-  <h2 class="section-title">Projects</h2>
-
-  <div class="project-card">
-    <h3>🔵 AI One-Click Security Triage Tool</h3>
-    <p>
-      Fully automated workflow integrating Nmap → JSON → Python → LLM analysis → dashboard insights.
-      Enhances vulnerability triage with AI-driven severity reasoning.
-    </p>
-    <a href="https://github.com/Abirock7/ai-triage" class="project-link" target="_blank">View Project →</a>
-  </div>
-
-  <div class="project-card">
-    <h3>🟦 Splunk Detection Engineering</h3>
-    <p>
-      Developed SPL detections mapped to MITRE ATT&CK for credential abuse, PowerShell compromise, 
-      lateral movement, ransomware indicators, and Sysmon-based threat hunting.
-    </p>
-  </div>
-
-  <div class="project-card">
-    <h3>🔥 NCL & CTF Writeups (Top 124/8573)</h3>
-    <p>
-      Practical writeups covering OSINT, packet forensics, exploitation, privilege escalation, and incident investigation.
-    </p>
-    <a href="https://medium.com/@abishekmoorthi711" class="project-link" target="_blank">Read Writeups →</a>
-  </div>
-
-</section>
-
-
-<!-- CONTACT -->
+<!-- CONTACT LINK -->
 <section id="contact" class="section">
   <h2 class="section-title">Contact</h2>
 
   <div class="contact-card">
     <p><strong>Email:</strong> abisheknarayanamoorthi0218@gmail.com</p>
-    <p><strong>LinkedIn:</strong> <a href="http://www.linkedin.com/in/abishek-narayanamoorthi-baa59b1aa" target="_blank">View Profile</a></p>
-    <p><strong>GitHub:</strong> <a href="https://github.com/Abirock7" target="_blank">Github.com/Abirock7</a></p>
+    <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/abishek-narayanamoorthi-baa59b1aa" target="_blank">View Profile</a></p>
+    <p><strong>GitHub:</strong> <a href="https://github.com/Abirock7" target="_blank">Abirock7</a></p>
     <p><strong>Medium:</strong> <a href="https://medium.com/@abishekmoorthi711" target="_blank">View Articles</a></p>
   </div>
 </section>
-
 
 <footer>
   <p>© 2025 Abishek Narayanamoorthi • Cybersecurity Portfolio</p>
 </footer>
 
-<!-- AOS Animation Library -->
+<!-- JS -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-
-<!-- ScrollReveal Library -->
-<script src="https://unpkg.com/scrollreveal"></script>
-
-<!-- Your JS File -->
 <script src="assets/script.js"></script>
+
 </body>
 </html>
