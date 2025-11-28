@@ -42,4 +42,21 @@ window.addEventListener("scroll", () => {
     header.style.boxShadow = "none";
   }
 });
+// DARK MODE
+const toggle = document.getElementById("darkToggle");
+toggle?.addEventListener("click", () => {
+  document.body.classList.toggle("dark");
+});
+
+// SCROLLREVEAL
+ScrollReveal({
+  distance: "40px",
+  duration: 1200,
+  easing: "ease",
+});
+
+ScrollReveal().reveal(".section-title", { origin: "top" });
+ScrollReveal().reveal(".skill-card", { origin: "bottom", interval: 150 });
+ScrollReveal().reveal(".timeline-item", { origin: "left", interval: 200 });
+ScrollReveal().reveal(".contact-form-card", { origin: "right" });
 
