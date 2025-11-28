@@ -51,7 +51,15 @@ document.addEventListener("DOMContentLoaded", () => {
             document.body.classList.toggle("dark");
         });
     }
+    // ---------------- CERTIFICATION MODAL ----------------
+function openModal(src) {
+  document.getElementById("certModal").style.display = "block";
+  document.getElementById("modalImg").src = src;
+}
 
+function closeModal() {
+  document.getElementById("certModal").style.display = "none";
+}
     /* SCROLLREVEAL */
     if (typeof ScrollReveal !== "undefined") {
         const sr = ScrollReveal({
