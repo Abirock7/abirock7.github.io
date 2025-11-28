@@ -1,13 +1,3 @@
-/* ----------------------------------------------------------
-   GLOBAL CYBER BACKGROUND (Blue Nodes)
------------------------------------------------------------ */
-body {
-  background: url("https://i.imgur.com/8fKQn1G.jpeg") no-repeat center center fixed;
-  background-size: cover;
-  color: #fff;
-  font-family: "Poppins", sans-serif;
-  overflow-x: hidden;
-}
 
 /* ==========================================================
    GLOBAL RESET
